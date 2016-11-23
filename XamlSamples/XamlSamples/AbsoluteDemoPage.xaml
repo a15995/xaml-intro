@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamlSamples.AbsoluteDemoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Absolute Demo Page">
+
+    <AbsoluteLayout BackgroundColor="#FF8080">
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0.33, 0, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="1, 0, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0, 0.33, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0.67, 0.33, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0.33, 0.67, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="1, 0.67, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0, 1, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0.67, 1, 0.25, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Color="#8080FF" />
+
+    </AbsoluteLayout>
+</ContentPage>

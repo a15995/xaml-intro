@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamlSamples.SharedResourcesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Shared Resources Page">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="horzOptions" Alignment="Center" />
+
+            <LayoutOptions
+                x:Key="vertOptions"
+                Alignment="Center"
+                Expands="True" />
+
+            <x:Double x:Key="borderWidth">3</x:Double>
+
+            <OnPlatform
+                x:Key="textColor"
+                x:TypeArguments="Color"
+                Android="Aqua"
+                WinPhone="#80FF80"
+                iOS="Red" />
+
+            <Font x:Key="font">Large</Font>
+
+            <x:Double x:Key="rotationAngle">-15</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+  <StackLayout>
+  <StackLayout.Resources>
+    <ResourceDictionary>
+      <Color x:Key="textColor">Blue</Color>
+    </ResourceDictionary>
+  </StackLayout.Resources>
+        <Button
+            BorderWidth="{StaticResource borderWidth}"
+            Font="{StaticResource font}"
+            HorizontalOptions="{StaticResource horzOptions}"
+            Rotation="{StaticResource rotationAngle}"
+            Text="Do this!"
+            TextColor="{StaticResource textColor}"
+            VerticalOptions="{StaticResource vertOptions}" />
+
+        <Button
+            BorderWidth="{StaticResource borderWidth}"
+            Font="{StaticResource font}"
+            HorizontalOptions="{StaticResource horzOptions}"
+            Rotation="{StaticResource rotationAngle}"
+            Text="Do that!"
+            TextColor="{StaticResource textColor}"
+            VerticalOptions="{StaticResource vertOptions}" />
+
+        <Button
+            BorderWidth="{StaticResource borderWidth}"
+            Font="{StaticResource font}"
+            HorizontalOptions="{StaticResource horzOptions}"
+            Rotation="{StaticResource rotationAngle}"
+            Text="Do the other thing!"
+            TextColor="{StaticResource textColor}"
+            VerticalOptions="{StaticResource vertOptions}" />
+
+    </StackLayout>
+</ContentPage>
