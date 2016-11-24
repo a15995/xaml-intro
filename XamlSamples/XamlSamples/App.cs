@@ -26,7 +26,7 @@ namespace XamlSamples
     {
         public App()
         {
-            MainPage = new RelativeLayoutPage();
+            MainPage = new InterfacePage();
         }
 
         protected override void OnStart()
