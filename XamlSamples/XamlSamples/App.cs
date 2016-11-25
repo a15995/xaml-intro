@@ -26,7 +26,7 @@ namespace XamlSamples
     {
         public App()
         {
-            MainPage = new InterfacePage();
+            MainPage = new SliderTransformsPage();
         }
 
         protected override void OnStart()

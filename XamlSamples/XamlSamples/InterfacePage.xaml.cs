@@ -9,12 +9,12 @@ namespace XamlSamples
 {
     class MyMarkupExtension : IMarkupExtension
     {
-        public int ExtraTalA { get; set; }
-        public int ExtraTalB { get; set; }
+        public int A { get; set; }
+        public int B { get; set; }
 
         public object ProvideValue(IServiceProvider serviceProvider)
         {
-            return "Hvor mange æbler vil jeg have? " + (ExtraTalA + ExtraTalB);
+            return "Mine tal er: " + (A + B);
         }
     }
 }

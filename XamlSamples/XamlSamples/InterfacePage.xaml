@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamlSamples"
-             x:Class="XamlSamples.InterfacePage">
-
+             x:Class="XamlSamples.InterfacePage"
+             Title="Apples">
+  
   <StackLayout BackgroundColor="Yellow">
-  <Label xName="textLabel" BackgroundColor="Gray"
-         Text="{local:MyMarkupExtension ExtraTalA=2, EkstraTalB=3}" />
+  <Label x:Name="textLabel" BackgroundColor="Gray" TextColor="Black"
+         Text="{local:MyMarkupExtension A=2, B=3}" />
   </StackLayout>
 </ContentPage>
