@@ -4,9 +4,21 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace XamlSamples
 {
+    class MyMarkupExtension : IMarkupExtension
+    {
+        public int A { get; set; }
+        public int B { get; set; }
+
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
+            return "Mine tal er: " + (A + B);
+        }
+    }
+
     static class AppConstants
     {
         public static readonly Thickness PagePadding =
@@ -26,7 +38,7 @@ namespace XamlSamples
     {
         public App()
         {
-            MainPage = new SliderTransformsPage();
+            MainPage = new InterfacePage();
         }
 
         protected override void OnStart()

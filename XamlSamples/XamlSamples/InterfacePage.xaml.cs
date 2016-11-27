@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms.Xaml;
+
+using Xamarin.Forms;
 
 namespace XamlSamples
 {
-    class MyMarkupExtension : IMarkupExtension
+    public partial class InterfacePage : ContentPage
     {
-        public int A { get; set; }
-        public int B { get; set; }
-
-        public object ProvideValue(IServiceProvider serviceProvider)
+        public InterfacePage()
         {
-            return "Mine tal er: " + (A + B);
+            InitializeComponent();
         }
     }
 }
