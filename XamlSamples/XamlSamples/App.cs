@@ -37,7 +37,7 @@ namespace XamlSamples
     {
         public App()
         {
-            MainPage = new InterfacePage();
+            MainPage = new ListViewDemoPage();
         }
 
         protected override void OnStart()
