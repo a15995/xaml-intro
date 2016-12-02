@@ -60,6 +60,9 @@
     <Compile Include="SharedResourcesPage.xaml.cs">
       <DependentUpon>SharedResourcesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SlidePage.xaml.cs">
+      <DependentUpon>SlidePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SliderBindingsPage.xaml.cs">
       <DependentUpon>SliderBindingsPage.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ListViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SlidePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

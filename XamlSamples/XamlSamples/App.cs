@@ -1,12 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace XamlSamples
 {
+    public class SimpleViewModel : INotifyPropertyChanged
+    {
+        private double myValue = 1;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public double MyValue
+        {
+            get
+            {
+                return myValue;
+            }
+            set
+            {
+                if (myValue != value)
+                {
+                    myValue = value;
+                    OnPropertyChanged();
+                }            
+            }
+        }
+
+        private void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            var ev = PropertyChanged;
+            if (ev != null)
+            {
+                ev(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+    // namespace SimpleValueConverter { }
+    public class IntScaleValueConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var myValue = (double)value;
+            return myValue * 100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var myValue = (double)value;
+            if (myValue != 0)
+            {
+                myValue = myValue / 100;
+            }
+            return myValue;
+        }
+    }
+
     class MyMarkupExtension : IMarkupExtension
     {
         public int A { get; set; }
@@ -37,11 +91,7 @@ namespace XamlSamples
     {
         public App()
         {
-<<<<<<< HEAD
-            MainPage = new ListViewDemoPage();
-=======
-            MainPage = new InterfacePage();
->>>>>>> 7adefa46a2d9e80eaa95c26cc22c19030920cc17
+            new InterfacePage();
         }
 
         protected override void OnStart()
